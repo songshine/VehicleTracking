@@ -1,0 +1,676 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{12EB18F0-AB92-45A2-99A1-E13FBF322389}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MIS_1</RootNamespace>
+    <AssemblyName>MIS_1</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Demo\Demo\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfoManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseInfoManagerForm.Designer.cs">
+      <DependentUpon>BaseInfoManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseRoadInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseRoadInfoForm.Designer.cs">
+      <DependentUpon>BaseRoadInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseSet.cs" />
+    <Compile Include="BeforeStatisticForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BeforeStatisticForm.Designer.cs">
+      <DependentUpon>BeforeStatisticForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HisRecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HisRecordForm.Designer.cs">
+      <DependentUpon>HisRecordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HisRecordInfo.cs" />
+    <Compile Include="HisRecQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HisRecQuery.Designer.cs">
+      <DependentUpon>HisRecQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HisStatisticForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HisStatisticForm.Designer.cs">
+      <DependentUpon>HisStatisticForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogForm.Designer.cs">
+      <DependentUpon>LogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager.Designer.cs">
+      <DependentUpon>Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerSet.cs" />
+    <Compile Include="OperateManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperateManagerForm.Designer.cs">
+      <DependentUpon>OperateManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PicShowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PicShowForm.Designer.cs">
+      <DependentUpon>PicShowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProjectDataSet.Designer.cs">
+      <DependentUpon>ProjectDataSet.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ProjectDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectDataSet13.Designer.cs">
+      <DependentUpon>ProjectDataSet13.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ProjectDataSet14.Designer.cs">
+      <DependentUpon>ProjectDataSet14.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ProjectDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectDataSet18.cs">
+      <DependentUpon>ProjectDataSet18.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AboutForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseInfoManagerForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BaseInfoManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseRoadInfoForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BaseRoadInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BeforeStatisticForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BeforeStatisticForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HisRecordForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HisRecordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HisRecQuery.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HisRecQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HisStatisticForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HisStatisticForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperateManagerForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OperateManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PicShowForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PicShowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatisticForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StatisticForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleQueryOptionForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VehicleQueryOptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="ProjectDataSet1.xsc">
+      <DependentUpon>ProjectDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectDataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ProjectDataSet1.xss">
+      <DependentUpon>ProjectDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet12.xsc">
+      <DependentUpon>ProjectDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet12.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectDataSet12.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ProjectDataSet12.xss">
+      <DependentUpon>ProjectDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet15.xsc">
+      <DependentUpon>ProjectDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet15.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectDataSet15.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ProjectDataSet15.xss">
+      <DependentUpon>ProjectDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet2.xsc">
+      <DependentUpon>ProjectDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectDataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ProjectDataSet2.xss">
+      <DependentUpon>ProjectDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet3.xsc">
+      <DependentUpon>ProjectDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectDataSet3.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ProjectDataSet3.xss">
+      <DependentUpon>ProjectDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet4.xsc">
+      <DependentUpon>ProjectDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjectDataSet4.xss">
+      <DependentUpon>ProjectDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet5.xsc">
+      <DependentUpon>ProjectDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjectDataSet5.xss">
+      <DependentUpon>ProjectDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet6.xsc">
+      <DependentUpon>ProjectDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjectDataSet6.xss">
+      <DependentUpon>ProjectDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet7.xsc">
+      <DependentUpon>ProjectDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjectDataSet7.xss">
+      <DependentUpon>ProjectDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet8.xsc">
+      <DependentUpon>ProjectDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjectDataSet8.xss">
+      <DependentUpon>ProjectDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet9.xsc">
+      <DependentUpon>ProjectDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjectDataSet9.xss">
+      <DependentUpon>ProjectDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RoadSet.cs" />
+    <Compile Include="SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchForm.Designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatisticForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatisticForm.Designer.cs">
+      <DependentUpon>StatisticForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleQueryOptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleQueryOptionForm.Designer.cs">
+      <DependentUpon>VehicleQueryOptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleSet.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\保存.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\查询选择.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\计算.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\取消.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删除.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\上记录.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\首记录.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\搜索.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\尾记录.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\下记录.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\新增.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\修改.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user-icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\2.jpg" />
+    <None Include="ProjectDataSet.xsc">
+      <DependentUpon>ProjectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ProjectDataSet.xss">
+      <DependentUpon>ProjectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet10.xsc">
+      <DependentUpon>ProjectDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjectDataSet10.xss">
+      <DependentUpon>ProjectDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet11.xsc">
+      <DependentUpon>ProjectDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjectDataSet11.xss">
+      <DependentUpon>ProjectDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet13.xsc">
+      <DependentUpon>ProjectDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet13.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectDataSet13.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ProjectDataSet13.xss">
+      <DependentUpon>ProjectDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet14.xsc">
+      <DependentUpon>ProjectDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet14.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectDataSet14.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ProjectDataSet14.xss">
+      <DependentUpon>ProjectDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet16.xsc">
+      <DependentUpon>ProjectDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet16.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectDataSet16.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ProjectDataSet16.xss">
+      <DependentUpon>ProjectDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet17.xsc">
+      <DependentUpon>ProjectDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet17.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectDataSet17.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ProjectDataSet17.xss">
+      <DependentUpon>ProjectDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet18.xsc">
+      <DependentUpon>ProjectDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet18.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectDataSet18.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ProjectDataSet18.xss">
+      <DependentUpon>ProjectDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet19.xsc">
+      <DependentUpon>ProjectDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet19.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectDataSet19.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ProjectDataSet19.xss">
+      <DependentUpon>ProjectDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet20.xsc">
+      <DependentUpon>ProjectDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet20.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectDataSet20.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ProjectDataSet20.xss">
+      <DependentUpon>ProjectDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\add_to_database.ico" />
+    <None Include="Resources\尾记录.ico" />
+    <None Include="Resources\删除.ico" />
+    <None Include="Resources\administrator.ico" />
+    <None Include="Resources\workgroup-manager-icon.ico" />
+    <None Include="Resources\icon-administration.ico" />
+    <None Include="Resources\reload.ico" />
+    <None Include="Resources\ico.ico" />
+    <None Include="Resources\history.ico" />
+    <None Include="Resources\Logsong.jpg" />
+    <None Include="Resources\baby.gif" />
+    <None Include="Resources\user_ico_login.gif" />
+    <None Include="Resources\About.png" />
+    <Content Include="Resources\春天.jpg" />
+    <None Include="Resources\首记录.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
